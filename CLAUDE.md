@@ -13,9 +13,10 @@ This is a skeleton/template for creating new projects in Claude Code.
 
 1. ✅ **Read and understand** `memory-bank/reference/WORKFLOW.md`
 2. ✅ **Read and understand** `memory-bank/reference/CONVENTIONS.md`
-3. ✅ **Confirm** which workflow phase you're starting with (Understanding/Planning/Implementation/Validation)
-4. ✅ **Create or update** your todo list using TodoWrite tool
-5. ✅ **State explicitly** that you've read the required files
+3. ✅ **Review relevant sections** of `memory-bank/reference/CHECKLIST.md` for your current phase
+4. ✅ **Confirm** which workflow phase you're starting with (Understanding/Planning/Implementation/Validation)
+5. ✅ **Create or update** your todo list using TodoWrite tool
+6. ✅ **State explicitly** that you've read the required files
 
 **If you skip these steps, STOP immediately and read them now.**
 

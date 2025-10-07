@@ -32,12 +32,14 @@ memory-bank/
 ## Streamlined Process
 
 ### Phase 1: Understanding
+🔍 **CHECKPOINT**: Review "Pre-Implementation Checklist" in `reference/CHECKLIST.md`
 - Read relevant docs in `memory-bank/docs/` and existing code if any. Search internet if relevant.
 - Use parallel research agents for complex discovery tasks
 - Ask clarifying questions upfront - batch them together
 - Document understanding in `tasks/<task-id>/research.md`; create that `<task-id>` subfolder if it doesn't exist yet, and make sure the task-id name includes the number first then a short semantic label (e.g. `1-1-bootstrap`)
 
 ### Phase 2: Planning
+📋 **CHECKPOINT**: Review "Pre-Implementation Checklist" in `reference/CHECKLIST.md`
 - Given the `research.md` and high-level docs (e.g. `implementation_plan.md`), come up with a plan for implementing the user request. We should reuse existing patterns, components and code where possible.
 - Write the comprehensive plan to `plan.md` in the task subfolder. The plan should include all context required for an engineer to implement the feature.
 - Create todo checklist within the same document, using `task-decomposer` subagent
@@ -45,15 +47,18 @@ memory-bank/
 - Get user approval before implementation
 
 ### Phase 3: Implementation (Main work)
+💻 **CHECKPOINT**: Review "During Implementation Checklist" in `reference/CHECKLIST.md`
 - Execute against the todo list, updating status inline
 - Document discoveries, blockers, and decisions in `plan.md`
 - Run tests and linting after each logical component
 - Commit frequently with descriptive messages
 
 ### Phase 4: Validation
+✅ **CHECKPOINT**: Review "Post-Implementation Checklist" in `reference/CHECKLIST.md`
 - Run full test suite and address any failures
 - Quick self-review for code quality and consistency
 - Update `docs/changelog.md` if the change is significant, or if you have discovered any learnings
+- **MANDATORY**: Complete "Task Completion Checklist" in `reference/CHECKLIST.md`
 - Mark task as complete
 - With my go-ahead (no need for very simple tasks), let's do an audit/code review using a subagent:
   - Send list of completed todos to a SEPARATE `implementation-auditor` agent to conduct a separate review of your work, it should write to a new `audit.md` file in the `<task-id>` subfolder
