@@ -1,6 +1,6 @@
 # Claude Code Project Template
 
-A **technology-agnostic workflow template** for effective human-AI collaboration on complex software projects.
+A **technology-agnostic workflow template** for effective human-AI collaboration on mid-to-large software projects. This is optimized for Claude Code but can be easily repurposed for other agents. It attempts to be as lightweight and generalizable as possible while providing enough of a structure and workflow harness to guide any project.
 
 ## What This Template Is
 
@@ -11,7 +11,7 @@ This template provides **workflow structure and documentation standards** for wo
 - **Quality gates and validation** to ensure consistent standards
 - **Parallel development coordination** when multiple features are in flight
 
-It follows a clear RESEARCH -> PLAN -> IMPLEMENT -> AUDIT/TEST -> DOCUMENT loop. See [WORKFLOW.md](./memory-bank/reference/WORKFLOW.md).
+It follows a clear RESEARCH -> PLAN -> IMPLEMENT -> AUDIT/TEST -> DOCUMENT loop. See [WORKFLOW.md](./memory-bank/reference/WORKFLOW.md) for details.
 
 ## What This Template Is NOT
 
