@@ -40,7 +40,7 @@ memory-bank/
 
 ### Phase 2: Planning
 📋 **CHECKPOINT**: Review "Pre-Implementation Checklist" in `reference/CHECKLIST.md`
-- Given the `research.md` and high-level docs (e.g. `implementation_plan.md`), come up with a plan for implementing the user request. We should reuse existing patterns, components and code where possible.
+- Given the `research.md` and high-level docs (e.g. `memory-bank/docs/implementation_plan.md`), come up with a plan for implementing the user request. We should reuse existing patterns, components and code where possible.
 - Write the comprehensive plan to `plan.md` in the task subfolder. The plan should include all context required for an engineer to implement the feature.
 - Create todo checklist within the same document, using `task-decomposer` subagent
 - Include "What we're NOT doing" section to prevent scope creep

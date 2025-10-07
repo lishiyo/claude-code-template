@@ -94,8 +94,8 @@ You will analyze markdown documentation files (PRDs, implementation plans, techn
 
 ## Output Requirements:
 
-- You MUST create exactly one file: The file I tell you, oftentimes roadmap.md, implementation_plan.md, or tasks.md
-- The file MUST be self-contained and readable without referring back to original docs
+- You MUST create exactly one file: The file I tell you, oftentimes `plan.md`
+- The file MUST be self-contained and readable without referring back to original docs, though you should link docs for easy reference
 - Every task MUST have checkbox items that can be checked off during implementation
 - Dependencies MUST be explicitly stated, never implied
 - Include time estimates to help with sprint planning

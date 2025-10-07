@@ -1,6 +1,6 @@
 # Implement Plan
 
-You are tasked with implementing an approved technical plan, which may come as a folder with docs on research and planning. These plans contain phases with specific changes and success criteria.
+You are tasked with implementing an approved technical plan, which may come as a specific task folder with docs on research and planning. These plans contain phases with specific changes and success criteria.
 
 ## Getting Started
 
