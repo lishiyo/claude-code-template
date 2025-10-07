@@ -1,6 +1,32 @@
 # Claude Code Project Template
 
-A structured template for AI-assisted development with clear workflows, documentation standards, and quality gates.
+A **technology-agnostic workflow template** for effective human-AI collaboration on complex software projects.
+
+## What This Template Is
+
+This template provides **workflow structure and documentation standards** for working with AI agents (especially Claude Code) on larger projects that require:
+- **Multiple coordinated tasks** with clear handoffs between sessions
+- **Persistent context management** across development phases
+- **Structured planning and documentation** that stays synchronized with code
+- **Quality gates and validation** to ensure consistent standards
+- **Parallel development coordination** when multiple features are in flight
+
+It follows a clear RESEARCH -> PLAN -> IMPLEMENT -> AUDIT/TEST -> DOCUMENT loop. See [WORKFLOW.md](./memory-bank/reference/WORKFLOW.md).
+
+## What This Template Is NOT
+
+This template is **deliberately unopinionated** about:
+- **Programming languages** (Python, TypeScript, Rust, Go, etc.)
+- **Frameworks and tech stacks** (React, Django, Express, etc.)
+- **Project types** (web apps, CLI tools, libraries, scripts, etc.)
+- **Code organization** (no `src/` structure imposed)
+- **Build systems or tooling** (works with any project setup)
+
+Instead, it focuses on the **meta-process** of how humans and AI agents can collaborate effectively on software projects that span multiple features, require careful planning, and benefit from structured documentation.
+
+## Included Tools
+
+The template includes optimized **Claude Code agents** and **Claude Code commands** in `.claude/` that may be useful.
 
 ## 🚀 Quick Start
 
