@@ -5,7 +5,7 @@ description: "Overall guidelines for AI agents like Claude on how to implement a
 
 ## Project Structure
 
-We need to keep the docs in `memory-bank` up to date:
+Planning docs and guidelines are kept in `memory-bank/`:
 ```
 memory-bank/
 ├── docs/                   # Project-wide documentation
@@ -17,7 +17,7 @@ memory-bank/
 │   └── changelog.md       # Progress tracking & decisions
 ├── tasks/                  # Task implementation workspace
 │   ├── roadmap.md         # High-level task breakdown
-│   ├── backlog.md         # Discovered issues not yet prioritized
+│   ├── backlog.md         # Issues discovered but not yet in roadmap
 │   └── [task-id]/         # Per-task workspace
 │       ├── research.md    # Research notes on the task
 │       ├── plan.md        # Implementation plan & todos
@@ -29,7 +29,7 @@ memory-bank/
     └── WORKFLOW.md        # This file - how we work together
 ```
 
-## Streamlined Process
+## Task Workflow
 
 ### Phase 1: Understanding
 🔍 **CHECKPOINT**: Review "Pre-Implementation Checklist" in `reference/CHECKLIST.md`
