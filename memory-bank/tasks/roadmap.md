@@ -1,167 +1,196 @@
 ---
-title: "Project Status Dashboard"
-description: "Tracker dashboard for our tasks and parallelization strategy"
+title: "Project Execution Roadmap Template"
+description: "Template for organizing task execution with parallelization strategy"
 ---
 
-# Project Roadmap & Task Status
+# Project Execution Roadmap
 
-## Current Sprint Status
+## Overview
 
-**Sprint**: Template Development
-**Period**: Initial Setup
-**Focus**: Core Template Structure and Documentation
+This roadmap shows the optimal execution order for [X] implementation tasks. You can run them sequentially with a single agent (safest) or parallelize with multiple agents (faster but requires careful coordination).
 
-### Active Tasks
+## Task Completion Status
 
-| Task ID | Task Name | Status | Assignee | Priority | Est. Days |
-|---------|-----------|--------|----------|----------|-----------|
-| 0-example-feature | Example User Authentication | ✅ Complete | Template | High | 2 |
+**Progress**: 0/[X] tasks complete
 
-### Completed Tasks
+### Phase 1: [Phase Name] (0/[N])
+- [ ] 1.1 - [Task Name]
+- [ ] 1.2 - [Task Name]
+- [ ] 1.3 - [Task Name]
 
-| Task ID | Task Name | Completed Date | Notes |
-|---------|-----------|----------------|-------|
-| 0-example-feature | Example User Authentication | 2024-01-20 | Template demonstration complete |
+### Phase 2: [Phase Name] (0/[N])
+- [ ] 2.1 - [Task Name]
+- [ ] 2.2 - [Task Name]
 
-### Upcoming Tasks
+[Continue for all phases...]
 
-| Task ID | Task Name | Status | Dependencies | Priority | Est. Days |
-|---------|-----------|--------|--------------|----------|-----------|
-| 1-1-first-real-task | [Replace with actual first task] | 📋 Planned | Template setup | High | TBD |
+## Execution Strategy
 
-## Parallel Development Strategy
+**Safety First**: Default to sequential execution. Parallelization is optional and only recommended when you have multiple agents and clear confidence in avoiding conflicts.
 
-### Currently Safe for Parallel Work
-- ✅ **Documentation updates** - Can be done simultaneously
-- ✅ **New feature planning** - Research phase can overlap
-- ✅ **Testing improvements** - Independent of core features
+**Key Principle**: Tasks within the same module/file area should run sequentially to avoid conflicts. Tasks touching different parts of the system can potentially run in parallel.
 
-### Serialization Required
-- ❌ **Database schema changes** - Must be coordinated
-- ❌ **Core authentication** - Foundational component
-- ❌ **Build/deployment config** - System-wide impact
+## Week-by-Week Execution Plan
 
-## Task Dependencies
+### Week 1: [Week Theme]
 
-```text
-Template Setup
-└── 0-example-feature (Complete)
-    └── 1-1-first-real-task (Planned)
-        └── [Future tasks based on project needs]
+**CRITICAL PATH (Must Complete Sequential)**:
+```
+1.1 Task Name → 1.2 Task Name → 1.3 Task Name
 ```
 
-## Resource Allocation
+**TIMING BREAKDOWN - When Tasks Can Start**:
 
-### AI Agent Assignments
-- **Primary Agent**: Available for any task
-- **Specialized Agents**: Available on-demand
-  - system-architect: For complex system design
-  - implementation-auditor: For quality reviews
-  - doc-code-sync-checker: For documentation validation
+```
+Time 0: Agent 1 starts 1.1 [Task Name] (prerequisite)
+        Agent 2, 3 wait (need X to complete first)
 
-### Workload Distribution
-- **High Priority**: Critical path features
-- **Medium Priority**: Quality improvements and optimizations
-- **Low Priority**: Nice-to-have enhancements
+After 1.1 ✅: Agent 1 starts 1.2 [Task Name]
+             Agent 2 can start 2.1 [Task Name] (needs 1.1, no conflicts)
+             Agent 3 can start [research/planning] (read-only activities)
 
-## Quality Metrics Dashboard
+After 1.2 ✅: Agent 1 starts 1.3 [Task Name]
+             Agent 2 continues 2.1
+             Agent 3 continues current task
 
-### Current Quality Status
-| Metric | Target | Current | Status |
-|--------|--------|---------|--------|
-| Test Coverage | >90% | N/A | 🟡 Not Applicable (Template) |
-| Documentation Coverage | 100% | 95% | 🟢 Good |
-| Code Quality (Linting) | 0 warnings | 0 | 🟢 Excellent |
-| Workflow Compliance | 100% | 100% | 🟢 Excellent |
+After 1.3 ✅: [Phase/system] complete, enables [next phase]
+```
 
-### Quality Trends
-- **Documentation**: Improving with template completion
-- **Workflow Adherence**: Maintained at 100%
-- **Task Completion**: On track with estimates
+**Dependencies**:
+- [Task] needs [other task] to complete first ([reason])
+- [Task] and [task] must be sequential ([reason])
 
-## Milestone Tracking
+**Files Touched**: `/src/[module]/`, `/[other-path]/`
 
-### Phase 1: Template Foundation ✅
-- [x] Basic directory structure
-- [x] Core documentation files
-- [x] Workflow guidelines
-- [x] Example task demonstration
-- [x] Quality checklists
+### Week 2: [Week Theme]
 
-### Phase 2: Real Project Implementation 🚧
-- [ ] First actual feature implementation
-- [ ] Workflow validation with real tasks
-- [ ] Quality metric collection
-- [ ] Template refinements
+[Follow same pattern...]
 
-### Phase 3: Template Optimization 📋
-- [ ] Performance improvements
-- [ ] Additional examples
-- [ ] Language-specific variants
-- [ ] Tool integrations
+## Safety Guidelines
 
-## Risk Assessment
+### Single Agent Execution (Recommended)
+If you prefer to avoid any parallelization conflicts, here's the complete sequential order:
 
-### Current Risks
-| Risk | Impact | Probability | Mitigation |
-|------|--------|-------------|------------|
-| Workflow too complex | Medium | Low | Regular review and simplification |
-| Documentation overhead | Medium | Medium | Focus on essential docs only |
-| Template inflexibility | High | Low | Regular user feedback incorporation |
+```
+Week 1: 1.1 → 1.2 → 1.3 → 2.1
+Week 2: 2.2 → 2.3 → 3.1 → 3.2
+[Continue with all tasks...]
+```
 
-### Risk Mitigation Strategies
-- **Regular Reviews**: Weekly assessment of workflow effectiveness
-- **User Feedback**: Collect input on template usability
-- **Incremental Improvements**: Small, frequent enhancements
-- **Documentation Maintenance**: Keep docs current and accurate
+**Total**: All [X] tasks accounted for in dependency-safe order.
 
-## Communication Plan
+### Multi-Agent File Conflict Rules
+- **Never** have multiple agents edit the same module simultaneously
+- **[System Component]** (X.X-X.X): Single agent only
+- **[System Component]** (X.X-X.X): Tasks A and B must be sequential, C/D can parallel each other
+- **APIs vs Services**: APIs can be built parallel to the services they wrap
+- **UI**: Can work parallel to backend once APIs exist
 
-### Weekly Updates
-- **Roadmap Review**: Update task statuses and priorities
-- **Metric Assessment**: Review quality and progress metrics
-- **Risk Evaluation**: Assess and mitigate emerging risks
+## Quick Start Guide
 
-### Milestone Reports
-- **Phase Completion**: Document lessons learned
-- **Template Updates**: Incorporate improvements
-- **Best Practices**: Share effective patterns
+### Start Here (Single Agent)
+Begin with **1.1 - [First Task]** and follow the Week 1 critical path.
 
-## Next Actions
+### Start Here (Multiple Agents)
+1. **Agent 1**: Start 1.1 - [First Task]
+2. **Agent 2**: Wait for 1.1, then start [next task]
+3. **Agent 3**: Begin [research/planning] (read-only)
 
-### Immediate (This Week)
-1. **Complete Template Setup** - Finalize all core documentation
-2. **User Testing** - Validate template with first real project
-3. **Quality Review** - Ensure all checklists are complete
+### High-Risk Integration Points
+- **[System Component]** (X.X-X.X): Core dependency for [other features]
+- **[System Component]** (X.X-X.X): Foundation for all [category] processing
+- **[System Component]** (X.X-X.X): Blocks [other component] development
 
-### Short Term (Next 2 Weeks)
-1. **First Real Task** - Implement actual project feature
-2. **Workflow Validation** - Test complete workflow end-to-end
-3. **Template Refinements** - Address any discovered issues
+## Dependency Matrix
 
-### Medium Term (Next Month)
-1. **Multiple Task Testing** - Validate parallel development
-2. **Quality Metrics** - Establish baseline measurements
-3. **Template Documentation** - Create user guide and best practices
+### Critical Dependencies (Must be Sequential)
+```
+1.1 First Task
+  └── 1.2 Second Task
+      └── 1.3 Third Task
+          └── 2.1 Next Phase Task
+
+2.1 Base Models
+  └── 2.2 Dependent Models
+      └── 3.1 Services Using Models
+```
+
+### Safe Parallel Zones
+```
+Week 1-2:
+├── Track 1: [Tasks that don't conflict]
+├── Track 2: [Independent tasks]
+└── Track 3: [Research/planning tasks]
+
+Week 3:
+├── Track 1: [Core pipeline tasks]
+├── Track 2: [Infrastructure tasks]
+└── Track 3: [UI/Integration tasks]
+```
+
+## Synchronization Points
+
+### Week 1 End: [Milestone Name]
+**Deliverables Required**:
+- [Component]: [Specific deliverables]
+- [Component]: [Specific deliverables]
+- [Component]: [Specific deliverables]
+
+**Integration Test**: [Test description]
+
+### Week 2 End: [Milestone Name]
+[Continue pattern...]
+
+## Risk Management
+
+### High-Risk Conflicts
+1. **[Conflict Area]**: [Description of conflict]
+   - **Mitigation**: [How to avoid]
+
+2. **[Conflict Area]**: [Description of conflict]
+   - **Mitigation**: [How to avoid]
+
+### Communication Protocols
+1. **Daily Sync**: Brief status update on blocking issues
+2. **Weekly Integration**: Full system integration testing
+3. **Merge Strategy**: Feature branch per task, frequent merges to avoid conflicts
+
+## Success Metrics
+
+### Weekly Milestones
+- **Week 1**: [Goal]
+- **Week 2**: [Goal]
+- **Week 3**: [Goal]
+
+### Quality Gates
+- Each track maintains >90% test coverage
+- All integration tests pass at synchronization points
+- No merge conflicts in critical path components
+- Documentation complete for all public interfaces
 
 ---
 
-## How to Use This Roadmap
+**Next Action**: Begin with Task 1.1 - [First Task] while other tracks prepare research and planning phases.
 
-### For AI Agents
-1. **Check current tasks** before starting new work
-2. **Update status** when completing or blocking on tasks
-3. **Note dependencies** to avoid conflicts
-4. **Document lessons learned** for future improvements
+## How to Use This Template
 
-### For Users
-1. **Review weekly** to track progress
-2. **Prioritize tasks** based on business needs
-3. **Coordinate resources** for complex tasks
-4. **Plan releases** around milestone completion
+### For New Projects
+1. **Copy this template** to your project's `memory-bank/tasks/roadmap.md`
+2. **Replace placeholders** with your actual tasks from `implementation_plan.md`
+3. **Identify dependencies** between your specific tasks
+4. **Group tasks by week** based on complexity and dependencies
+5. **Create timing breakdowns** for each week showing when agents can start tasks
+6. **Test the plan** with a small team to identify conflicts
 
-### Maintenance Notes
-- Update task statuses immediately when changed
-- Review dependencies weekly for accuracy
-- Archive completed sprints monthly
-- Reassess priorities based on changing requirements
+### Key Sections to Customize
+- **Task Completion Status**: Copy task IDs and names from your implementation plan
+- **Week-by-Week Plan**: Group your tasks by realistic weekly goals
+- **Timing Breakdowns**: Map out exact dependencies and start conditions
+- **Safety Guidelines**: Create sequential fallback path for all tasks
+- **File Conflicts**: Identify modules where parallel work would conflict
+
+### Best Practices
+- **Start conservatively**: Use single-agent execution until you understand the dependencies
+- **Test parallelization**: Try with 2 agents before scaling to 3+
+- **Update frequently**: Adjust the roadmap as you discover new dependencies
+- **Document conflicts**: Record any parallelization issues you encounter for future reference

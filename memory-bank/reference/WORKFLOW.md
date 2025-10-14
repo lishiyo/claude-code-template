@@ -57,6 +57,7 @@ memory-bank/
 ✅ **CHECKPOINT**: Review "Post-Implementation Checklist" in `reference/CHECKLIST.md`
 - Run full test suite and address any failures
 - Quick self-review for code quality and consistency
+- **CRITICAL**: Update `tasks/<task-id>/plan.md` to check off all completed todos and success criteria - this provides an audit trail for the implementation-auditor agent later if need be
 - Update `docs/changelog.md` if the change is significant, or if you have discovered any learnings
 - **MANDATORY**: Complete "Task Completion Checklist" in `reference/CHECKLIST.md`
 - Mark task as complete
